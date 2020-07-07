@@ -9,7 +9,7 @@ class MyString{
         return this.string1.split('').reverse().join('')
     }
     ucFirst(){
-        return this.string2.toLowerCase().charAt(0).toUpperCase() + this.string2.substr(1)
+        return this.string2.toLowerCase().charAt(0).toUpperCase() + this.string2.slice(1)
     }
     ucWords(){
         return this.string3.split(' ').map(function(string){
