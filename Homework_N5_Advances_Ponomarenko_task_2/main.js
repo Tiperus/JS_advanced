@@ -25,11 +25,16 @@ let products = {
     function cassa(){
         return balans 
     }
+    function newProduct(name, count){
+        products[name].count+=count;
+        balans-=count*products[name].price;
+    }
 
 return{
     sellOperation: sell,
     storage: storage,
-    cash: cassa
+    cash: cassa,
+    addStorage: newProduct
 
 }
 }());
@@ -45,6 +50,11 @@ console.log(myShop.storage('bread'))
 
 
 myShop.sellOperation("milk",20)
+
+console.log(myShop.cash())
+console.log(myShop.storage('milk'))
+
+myShop.addStorage('milk',30)
 
 console.log(myShop.cash())
 console.log(myShop.storage('milk'))
