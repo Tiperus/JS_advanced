@@ -56,7 +56,7 @@ function EspressoCoffeeMaker(coffee, cup, name){
 
 EspressoCoffeeMaker.prototype=CapsuleCoffeeMaker.prototype
 
-delete EspressoCoffeeMaker.keepWarm
+// delete EspressoCoffeeMaker.keepWarm
 // delete CapsuleCoffeeMaker.prototype.keepWarm
 
 EspressoCoffeeMaker.prototype.makeLate = function(addMilk){
@@ -64,11 +64,12 @@ EspressoCoffeeMaker.prototype.makeLate = function(addMilk){
     console.log('make Late', this.addMilk)
 }
 
-const myEspressoCoffeeMaker = new EspressoCoffeeMaker()
-
+const myEspressoCoffeeMaker = new EspressoCoffeeMaker('mokka', 'glass', 'arabica')
+console.log(myEspressoCoffeeMaker)
+delete myEspressoCoffeeMaker.keepWarm('try to delete')
 myEspressoCoffeeMaker.on('mokka')
 myEspressoCoffeeMaker.off('porcelain')
-// myEspressoCoffeeMaker.keepWarm('neVazno')
+myEspressoCoffeeMaker.keepWarm('termos')
 myEspressoCoffeeMaker.makeStrongCoffee('espresso')
 myEspressoCoffeeMaker.makeLate('milk')
 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form name="singUp" class="persone_cart">
+        <div class="for_head">
+            <h2>Create your accont </h2>
+        </div>
+        <div class="input_frame" id="first_name_div">
+            <label for="first_name" id="first_name_label" class="disabled">First Name (1 letter capital)</label>
+                <input type="text" name="first_name" id="first_name" placeholder="First Name">
+            
+        </div>
+        <div class="input_frame" id="second_name_div">
+            <label for="second_name" class="disabled" id="second_name_label">Second Name (1 letter capital)</label>
+                <input type="text" name="second_name" id="second_name" placeholder="Second Name">
+            
+        </div>
+        <div class="input_frame" id="email_div">
+            <label for="email" class="disabled" id="email_label">Email address</label>
+                <input type="text" name="email" id="email" placeholder="Email address">
+            
+        </div>
+        <div class="input_frame" id="password_div">
+            <label for="password"class="disabled" id="password_label">Password (Min 8 characters, at least 1 letter and 1 number)</label>
+                <input type="text" name="password" id="password" placeholder="Password">
+        </div>
+        <button type="button" name="btnSingUp" value="Sing Up">Sing Up</button>
+    </form>
+    <form name="openAcc" class="disabled">
+        <div class="for_head">
+            <h2>Open your accont </h2>
+        </div>
+        
+        <div class="input_frame" id="email_div_open">
+            <label for="email_open" class="disabled" id="email_label_open">Email address</label>
+                <input type="text" name="email_open" id="email_open" placeholder="Email address">
+            
+        </div>
+        <div class="input_frame" id="password_div_open">
+            <label for="password_open"class="disabled" id="password_label_open">Password</label>
+                <input type="text" name="password_open" id="password_open" placeholder="Password">
+        </div>
+        <button type="button" name="btnOpenAcc" value="Open account">Open account</button>
+    </form>
+    <form name="userCart" class="disabled">
+        <div class="head_mans_form"></div>
+        <div class="content_mans_form">
+            <p class="window_w_0"></p>
+            <p class="window_w_1"></p>
+            <p class="window_w_2"></p>
+        </div>
+        <button type="button" class="sing_out">Sing Out</button>
+        <div class="footer_mans_form">
+            <i class="uil uil-facebook-f"></i>
+            <i class="uil uil-github-alt"></i>
+            <i class="uil uil-linkedin-alt"></i>
+        </div>
+    </form>
+    
+
+
+
+
+
+    <script src="cangeClass.js" type="module"></script>
+    <script src="checkLokal.js" type="module"></script>
+    <script src="checkBeforePush.js" type="module"></script>
+    <script src="pushNewUser.js" type="module"></script>
+    <script src="checkUser.js" type="module"></script>
+    
+    <script src="main.js" type="module"></script>
+</body>
+</html>
