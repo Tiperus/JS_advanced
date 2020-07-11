@@ -15,13 +15,13 @@ import {
     pushNewUser
     } from './pushNewUser.js';
 import {
-        changeClass
+    changeClass
     } from './cangeClass.js';
 import {
     checkLocalStorsge
 } from './checkLokal.js';
 first=checkLocalStorsge(first, localStorageArray);
-console.log(first);
+// console.log(first);
 
 import {
     checkBeforePush
@@ -43,18 +43,18 @@ import{
 let btnOpenAcc=document.forms['openAcc']['btnOpenAcc'];
 let openAccEmail=document.forms['openAcc']['email_open'];
 let openAccPass=document.forms['openAcc']['password_open'];
-let openAccFrameEmail=document.querySelector('#email_div_open');
-let openAccFramePass=document.querySelector('#password_div_open');
+let openAccFrameEmail=getSel('#email_div_open');
+let openAccFramePass=getSel('#password_div_open');
 
 let firstName = getSel('#first_name')
-let firstNameLabel=document.querySelector("#first_name_label")
-let firstNameFrame=document.querySelector("#first_name_div")
+let firstNameLabel=getSel("#first_name_label")
+let firstNameFrame=getSel("#first_name_div")
 
 changeClass(firstName, firstNameLabel, firstNameFrame)
 
 let secondName = getSel('#second_name')
-let secondNameLabel=document.querySelector("#second_name_label")
-let secondNameFrame=document.querySelector("#second_name_div")
+let secondNameLabel=getSel("#second_name_label")
+let secondNameFrame=getSel("#second_name_div")
 changeClass(secondName, secondNameLabel, secondNameFrame)
 
 let email =getSel('#email');
@@ -107,7 +107,7 @@ singUp.addEventListener('click',function(){
    }
       let newUser= new User(firstName.value, secondName.value, email.value, password.value)
         newUser.checkAndPush()
-        console.log(posibleToAdd)
+        // console.log(posibleToAdd)
         // console.log(JSON.parse(localStorage.getItem('userArray')))
      if(name&&sname&&emailCheck&&passwordCheck&&posibleToAdd){
         localStorageArray=JSON.parse(localStorage.getItem('userArray'))
@@ -152,3 +152,4 @@ btnOpenAcc.addEventListener('click', function(){
     checkUser(openAccEmail.value, openAccPass.value,openAccFrameEmail,openAccFramePass,singUpForm,openForm, userFormCart)
     
 })
+// console.log(JSON.parse(localStorage.userArray)[0].name)

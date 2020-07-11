@@ -11,21 +11,20 @@ export function checkUser (arg1, arg2, frame1, frame2, formSingUp, formOpen, cus
             document.querySelector('.window_w_2').innerText=arr[index].email;
             document.querySelector('#email_open').value='';
             document.querySelector('#password_open').value='';
-
-
         }
         else{ 
-            if(arg1!==arr[index].email){
+            // if(arg1!==arr[index].email){
             // frame1.setAttribute('class','input_frame_badacces');
 
-            }
-            else if (arg1!==arr[index].pass){
+            // }
+            // else if (arg1!==arr[index].pass){
             // frame2.setAttribute('class','input_frame_badacces');
-            }
+            // }
             formSingUp.setAttribute('class','persone_cart');
             formOpen.setAttribute('class','disabled');
             customerCart.setAttribute('class','disabled');
-
+            document.querySelector('#email_open').value='';
+            document.querySelector('#password_open').value='';
         }
     })
     document.querySelector('.sing_out').addEventListener('click', function(){
