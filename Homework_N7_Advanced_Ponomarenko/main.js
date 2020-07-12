@@ -8,7 +8,7 @@ let mainBox=document.getElementById('main');
 let detailsBox=document.getElementById('details');
 let inputValue=document.forms['moveRequest']['moveName'];
 document.getElementById('request').addEventListener('click', function(){
-    let movieArr=requestMove(`s=${inputValue.value}`)
+    let movieArr=requestMove(`s=[${inputValue.value}]`)
     console.log(movieArr.Search.length)
     for(let i=0; i<=movieArr.Search.length; i++){
         let posterCart=document.createElement('div');
